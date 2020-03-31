@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "자동수강",
+  "description": "자동수강",
+  "version": "1.0",
+	
+  "icons": {
+      "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    "inject.js"
+  ],
+  "content_scripts": [ {
+    "all_frames": true,
+    "js": ["jquery-1.11.0.min.js","content.js"],
+    "matches": ["*://*/*"],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+	"http://www.kifin.or.kr/*"
+  ]
+}
